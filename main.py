@@ -82,7 +82,7 @@ def source(t, x):
 
 wave_equation_descriptor = simulation.WaveEquationDescriptor(wave_speed=1, boundary_conditions=boundary_conditions,
                                                              source_function=source)
-heat_equation_descriptor = simulation.HeatEquationDescriptor(diffusivity=0.01, boundary_conditions=boundary_conditions,
+heat_equation_descriptor = simulation.HeatEquationDescriptor(diffusivity=0.001, boundary_conditions=boundary_conditions,
                                                              source_function=source)
 # The diffusivity of the heat equation is low to allow convergence.
 
