@@ -116,7 +116,7 @@ class BVPDescriptor(object):
     """
     def __init__(self, boundary_conditions, source_function):
         self.boundary_conditions = boundary_conditions
-        self.source_function = lambda t, x: numpy.vectorize(lambda scalar_x: source_function(t, x))(x)
+        self.source_function = lambda t, x: numpy.vectorize(lambda scalar_x: source_function(t, scalar_x))(x)
         # The above convoluted mess makes source_function into a function vectorised in x.
 
     def update_function(self, t, dt, x, y, y_previous, laplacian):
